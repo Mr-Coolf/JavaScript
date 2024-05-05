@@ -1,0 +1,46 @@
+body{
+    margin-top: 30px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    background-color: hsl(208, 100%, 97%);
+}
+#myLabel{
+    font-weight: 700;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: hsl(208, 100%, 90%)
+}
+#myInput{
+    background-color: hsl(208, 100%, 85%);
+    border-radius: 10px;
+    padding: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    border: 3.5px solid black;
+    transition: all ease 0.3s;
+}
+#myInput:focus{
+    background-color: hsl(208, 100%, 75%);
+}
+#myButton{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    font-weight: 900;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    background-color: hsl(208, 100%, 70%);
+    transition: all ease 0.3s;
+}
+#myButton:hover{
+    background-color: hsl(208, 100%, 65%);
+}
+#myButton:active{
+    background-color: hsl(208, 100%, 55%);
+}
+#myP{
+    font-weight: 500;
+}

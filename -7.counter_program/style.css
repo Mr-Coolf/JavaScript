@@ -1,0 +1,28 @@
+#countLabel{
+    display: block;
+    text-align: center;
+    font-size: 10em;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Courier, monospace;
+    color: hsl(0, 10%, 20%);
+}
+#btnContainer{
+    text-align: center;
+}
+.buttons{
+    padding: 10px 20px;
+    font-size: 1.5em;
+    background-color: hsl(33, 100%, 88%);
+    border-radius: 15px;
+    transition: background-color 0.4s;
+}
+/* .buttons:not(hover){
+    transition-duration: 0.4s;
+    cursor: auto;
+    background-color: hsl(33, 100%, 88%);
+} */
+.buttons:hover{
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: hsl(33, 100%, 78%);
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9</title>
+    <style>
+        body{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+#myButton{
+    font-size: 3em;
+    border-radius: 5px;
+    padding: 10px;
+}
+#myButton{
+    transition: all 0.3s ease 0s;
+    font-size: 3em;
+    background-color: hsl(208, 36%, 67%);
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+    
+}
+#myButton:hover{
+    font-size: 3em;
+    background-color: hsl(208, 36%, 57%);
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+}
+#myButton:active{
+    font-size: 3em;
+    background-color: hsl(208, 36%, 47%);
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+}
+#myLabel{
+    font-size: 3em;
+}
+    </style>
+</head>
+<body>
+    <button id="myButton">Roll the dice</button>
+    <br>
+    <label id="myLabel"></label>
+    <script>
+        const myButton = document.getElementById("myButton")
+        const myLabel = document.getElementById("myLabel")
+        const min = 1;
+        const max = 6;
+
+        let randomNum;
+
+        myButton.onclick = function() {
+            randomNum = Math.floor(Math.random() * (max-min)) + min
+            myLabel.textContent = randomNum
+        }
+    </script>
+</body>
+</html>

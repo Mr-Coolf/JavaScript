@@ -1,0 +1,28 @@
+.main{
+    background-color: hsl(292, 37%, 41%);
+    border: 3px solid black;
+    border-radius: 15px;
+    display: inline-block;
+    padding: 15px;
+    padding-bottom: 5px;
+    margin: 15px;
+    text-align: center;
+    color: rgb(180, 218, 231);
+}
+#myButton{
+    background-color: hsl(292, 37%, 31%);
+    border-radius: 10px;
+    padding: 10px;
+    color: hsl(195, 52%, 81%);
+    
+}
+#myButton:not(hover){
+    transition-duration:  0.4s;
+    background-color: hsl(292, 37%, 31%);
+    color: hsl(195, 52%, 81%);
+}
+#myButton:hover{
+    transition-duration:  0.4s;
+    color: hsl(195, 52%, 60%);
+    background-color: hsl(292, 37%, 21%);
+}

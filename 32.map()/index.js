@@ -15,19 +15,29 @@
 // console.log(squares);
 // console.log(cubes);
 
-const students = ["Spongebob", "Patrick", "Squidward", "Sandy"]
+// const students = ["Spongebob", "Patrick", "Squidward", "Sandy"]
 
-function upperCase(element) {
-    return element.toUpperCase();
+// function upperCase(element) {
+//     return element.toUpperCase();
+// }
+
+// const studentUpperCase = students.map(upperCase);
+// console.log(studentUpperCase);
+
+
+// function lowerCase(element) {
+//     return element.toLowerCase();
+// }
+
+// const studentLowerCase = students.map(lowerCase);
+// console.log(studentLowerCase);
+
+const dates = ["2024-1-10", "2024-2-20", "2026-3-30"]
+
+function formatDates(element) {
+    const parts = element.split("-");
+    return `${parts[2]}/${parts[1]}/${parts[0]}`;
 }
 
-const studentUpperCase = students.map(upperCase);
-console.log(studentUpperCase);
-
-
-function lowerCase(element) {
-    return element.toLowerCase();
-}
-
-const studentLowerCase = students.map(lowerCase);
-console.log(studentLowerCase);
+const formattedDates = dates.map(formatDates);
+console.log(formattedDates)

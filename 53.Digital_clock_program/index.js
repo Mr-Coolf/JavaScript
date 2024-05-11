@@ -10,7 +10,7 @@ function updateClock() {
 
     timeString = `${hours}:${minutes}:${seconds}`;
 
-    clockDiv.innerHTML = timeString;
+    clockDiv.textContent = timeString;
 
 }
 

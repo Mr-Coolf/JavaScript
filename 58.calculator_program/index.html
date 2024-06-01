@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>58</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="calculator-container">
+        <div id="calculator-display">
+            0
+        </div>
+        <div id="calculator-buttons">
+            <div>
+                <button class="orangeBtn" onclick="append('+')" id="">+</button>
+                <button class="" onclick="append('7')" id="">7</button>
+                <button class="" onclick="append('8')" id="">8</button>
+                <button class="" onclick="append('9')" id="">9</button>
+            </div>
+            
+            <div>
+                <button class="orangeBtn" onclick="append('-')" id="">-</button>
+                <button class="" onclick="append('4')" id="">4</button>
+                <button class="" onclick="append('5')" id="">5</button>
+                <button class="" onclick="append('6')" id="">6</button>
+            </div>
+            
+            <div>
+                <button class="orangeBtn" onclick="append('*')" id="">*</button>
+                <button class="" onclick="append('1')" id="">1</button>
+                <button class="" onclick="append('2')" id="">2</button>
+                <button class="" onclick="append('3')" id="">3</button>
+            </div>
+
+            <div>
+                <button class="orangeBtn" onclick="append('/')" id="">/</button>
+                <button class="" onclick="append('0')" id="">0</button>
+                <button class="" onclick="append('.')" id="">.</button>
+                <button class="" onclick="calc('=')" id="">=</button>
+            </div>
+
+            <div>
+                <button class="orangeBtn" onclick="clearDisplay()" id="">C</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

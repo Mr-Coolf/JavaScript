@@ -1,0 +1,22 @@
+[
+    {
+        "name" : "Ilya",
+        "age" : 14,
+        "isSmart" : true
+    },
+    {
+        "name" : "Alexey",
+        "age" : 15,
+        "isSmart" : true
+    },
+    {
+        "name" : "Ivan",
+        "age" : 15,
+        "isSmart" : true
+    },
+    {
+        "name" : "Duje",
+        "age" : 15,
+        "isSmart" : true
+    }
+]

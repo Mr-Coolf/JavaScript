@@ -1,0 +1,17 @@
+#box{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    transform: translateY(20px) translateX(20px);
+    position: absolute;
+    transition: 50ms ease-in-out top, 50ms ease-in-out top;
+    border-radius: 10px;
+}
+#box *{
+    width: 100%;
+    font-size: 2.5rem;
+}

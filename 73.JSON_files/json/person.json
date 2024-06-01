@@ -1,0 +1,6 @@
+{
+    "name" : "Ilya",
+    "age" : 14,
+    "isSmart" : true,
+    "hobbies" : ["tennis", "valorant", "school"]
+}

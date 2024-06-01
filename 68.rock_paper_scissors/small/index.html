@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>68</title>
+    <style>
+        body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body * {
+    user-select: none;
+}
+h1{
+    font-size: 3.5rem;
+    color: indigo;
+}
+#choices{
+    margin-bottom: 30px;
+}
+#choices button{
+    font-size: 7rem;
+    min-width: 160px;
+    margin: 0px, 10px;
+    /* padding-bottom: 25px; */
+    border-radius: 200px;
+    background-color: hsl(180, 100%, 50%);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 15px hsla(0, 0%, 0%, 0.4);
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+#choices button:hover {
+    background-color: hsl(180, 70%, 70%);
+    transform: translateY(3px);
+}
+#choices button:active {
+    background-color: hsl(180, 40%, 70%);
+    transform: translateY(6px);
+}
+#playerDisplay, #computerDisplay, #gameDisplay{
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+#resultDisplay{
+    font-size: 4rem;
+    margin-top: 0;
+    /* margin: 10px 0px; */
+}
+    </style>
+</head>
+<body>
+    <h1>Rock - Paper - Scissors</h1>
+
+    <div id="choices">
+        <button onclick="playGame('rock')">👊</button>
+        <button onclick="playGame('paper')">✋</button>
+        <button onclick="playGame('scissors')">✌</button>    
+    </div>
+    <div id="gameDisplay"></div>
+    <div id="playerDisplay">PLAYER:</div>
+    <div id="computerDisplay">COMPUTER:</div>
+    <div id="resultDisplay">IT'S A TIE!</div>
+    <script>
+        const choices = ["rock", "paper", "scissors"];
+const choiceEmojis = ['👊', '✋', '✌'];
+let computerChoice;
+const combinations = [["paper", ["rock", "paper"]], ["rock", ["rock", "scissors"]], ["scissors", ["scissors", "paper"]]];
+
+const playerDisplay = document.getElementById("playerDisplay");
+const computerDisplay = document.getElementById("computerDisplay");
+const resultDisplay = document.getElementById("resultDisplay");
+const gameDisplay = document.getElementById("gameDisplay");
+
+let playerWins = 0;
+let computerWins = 0;
+
+playerDisplay.textContent = `PLAYER: ${playerWins}`;
+computerDisplay.textContent = `COMPUTER: ${computerWins}`;
+
+function playGame(playerChoice) {
+
+    computerChoice = choices[Math.floor(Math.random()*3)];
+    let result = findWinner(playerChoice, computerChoice);
+
+    switch (result) {
+        case 0:
+            resultDisplay.textContent = "IT'S A TIE!";
+            playerWins++;
+            computerWins++;
+            break;
+        case 1:
+            resultDisplay.textContent = "PLAYER WINS!";
+            playerWins++;
+            break;
+        case 2:
+            resultDisplay.textContent = "COMPUTER WINS!";
+            computerWins++;
+            break;
+        default:
+            break;
+   }
+
+   gameDisplay.textContent = `${choiceEmojis[choices.indexOf(playerChoice)]} VS ${choiceEmojis[choices.indexOf(computerChoice)]}`
+   playerDisplay.textContent = `PLAYER: ${playerWins}`;
+   computerDisplay.textContent = `COMPUTER: ${computerWins}`;
+
+}
+let result;
+function findWinner(firstChoice, secondChoice) {
+    result;
+    if(firstChoice == secondChoice) return 0;
+    else {
+        combinations.forEach(combination => {
+            if(JSON.stringify(combination[1].sort()) == JSON.stringify([firstChoice, secondChoice].sort())) {
+                if (combination[0] == firstChoice) {
+                    result = 1;
+                } else {
+                    result = 2;
+                }
+            }
+        })
+        return result;
+    }
+    
+}
+console.log(([1, 2].sort()) == ([2, 1].sort()), [1,2].sort(), [2,1].sort());
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+h1{
+    font-size: 5rem;
+    margin: 25px;
+}
+#myBtn{
+    font-size: 4rem;
+    margin: 15px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    transition: 0.3s ease-in-out;
+    /* box-shadow: 0 0 0px hsla(0, 0%, 0%, 0.2); */
+}
+
+.enabled{
+    background-color: blue;
+    color: wheat;
+}
+.hover{
+    box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.2);
+    font-weight: bold;
+}
+.disabled{
+    background-color: lightgray;
+    color: graywheat;
+}

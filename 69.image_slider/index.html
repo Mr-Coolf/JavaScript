@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>69</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="slider">
+        <div class="slides">
+            <img class="slide" src="pictures/tesla1.png" alt="tesla1">
+            <img class="slide" src="pictures/tesla2.png" alt="tesla2">
+            <img class="slide" src="pictures/tesla3.png" alt="tesla3">
+            <img class="slide" src="pictures/tesla4.png" alt="tesla4">
+            <img class="slide" src="pictures/tesla5.png" alt="tesla5">
+        </div>
+        <button class="previous" onclick="prevSlide()">&#10094</button>
+        <button class="next" onclick="nextSlide()">&#10095</button>
+    </div>
+    <h1>Paint</h1>
+    <div class="colorChoose">
+        <div class="outer">
+            <div id="gray" class="chooser" onclick="setImg('gray')"></div>
+        </div>
+        <div class="outer">
+            <div id="white" class="chooser" onclick="setImg('white')"></div>
+        </div>
+        <div class="outer">
+            <div id="blue" class="chooser" onclick="setImg('blue')"></div>
+        </div>
+        <div class="outer">
+            <div id="black" class="chooser" onclick="setImg('black')"></div>
+        </div>
+        <div class="outer">
+            <div id="red" class="chooser" onclick="setImg('red')"></div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
